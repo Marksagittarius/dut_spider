@@ -1,0 +1,26 @@
+body {
+    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+}
+
+.chart_box {
+    margin: 10px;
+    height: 520px;
+    width: 600px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 1px #212020;
+}
+
+.chart {
+    margin:0 10px;
+}
+
+#charts_wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: space-around;
+    align-content: flex-start;
+}
+

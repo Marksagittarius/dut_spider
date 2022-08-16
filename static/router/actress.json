@@ -1,0 +1,9 @@
+{
+    "charts": [
+        "height_pie",
+        "weight_pie",
+        "nation_pie",
+        "blood_type_bar",
+        "constellation_bar"
+    ]
+}
