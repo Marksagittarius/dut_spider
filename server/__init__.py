@@ -13,5 +13,10 @@ async def render_actress_page(request: Request):
     return templates.TemplateResponse("actress.html", {"request": request})
 
 
+@app.get("/television")
+async def render_television_page(request: Request):
+    return templates.TemplateResponse("television.html", {"request": request})
+
+
 def get_router():
     return app

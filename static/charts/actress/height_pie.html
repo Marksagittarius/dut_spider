@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="d08dfcc95aa443bbaf34316603bdc252" class="chart-container" style="width:580px; height:500px;"></div>
+    <div id="1b238345d04847a38b507ba06d766410" class="chart-container" style="width:700px; height:500px;"></div>
     <script>
-        var chart_d08dfcc95aa443bbaf34316603bdc252 = echarts.init(
-            document.getElementById('d08dfcc95aa443bbaf34316603bdc252'), 'light', {renderer: 'canvas'});
-        var option_d08dfcc95aa443bbaf34316603bdc252 = {
+        var chart_1b238345d04847a38b507ba06d766410 = echarts.init(
+            document.getElementById('1b238345d04847a38b507ba06d766410'), 'light', {renderer: 'canvas'});
+        var option_1b238345d04847a38b507ba06d766410 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -107,10 +107,37 @@
     ],
     "tooltip": {
         "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "Height",
+            "subtext": "\u6210\u5458\u8eab\u9ad8\u5206\u5e03(cm)",
+            "top": "80%",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "toolbox": {
+        "show": true,
         "orient": "horizontal",
         "itemSize": 15,
         "itemGap": 10,
         "left": "80%",
+        "top": "10%",
         "feature": {
             "saveAsImage": {
                 "type": "png",
@@ -179,18 +206,9 @@
                 }
             }
         }
-    },
-    "title": [
-        {
-            "text": "Height",
-            "subtext": "\u6210\u5458\u8eab\u9ad8\u5206\u5e03(cm)",
-            "top": "80%",
-            "padding": 5,
-            "itemGap": 10
-        }
-    ]
+    }
 };
-        chart_d08dfcc95aa443bbaf34316603bdc252.setOption(option_d08dfcc95aa443bbaf34316603bdc252);
+        chart_1b238345d04847a38b507ba06d766410.setOption(option_1b238345d04847a38b507ba06d766410);
     </script>
 </body>
 </html>

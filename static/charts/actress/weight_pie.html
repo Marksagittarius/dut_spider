@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="991e48cac11f425ab1cda9318e0771d5" class="chart-container" style="width:580px; height:500px;"></div>
+    <div id="5ac3e12fc5594d6697ab9102ab255f86" class="chart-container" style="width:700px; height:500px;"></div>
     <script>
-        var chart_991e48cac11f425ab1cda9318e0771d5 = echarts.init(
-            document.getElementById('991e48cac11f425ab1cda9318e0771d5'), 'light', {renderer: 'canvas'});
-        var option_991e48cac11f425ab1cda9318e0771d5 = {
+        var chart_5ac3e12fc5594d6697ab9102ab255f86 = echarts.init(
+            document.getElementById('5ac3e12fc5594d6697ab9102ab255f86'), 'light', {renderer: 'canvas'});
+        var option_5ac3e12fc5594d6697ab9102ab255f86 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -108,10 +108,37 @@
     ],
     "tooltip": {
         "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "Weight",
+            "subtext": "\u6210\u5458\u4f53\u91cd\u5206\u5e03(kg)",
+            "top": "80%",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "toolbox": {
+        "show": true,
         "orient": "horizontal",
         "itemSize": 15,
         "itemGap": 10,
         "left": "80%",
+        "top": "10%",
         "feature": {
             "saveAsImage": {
                 "type": "png",
@@ -180,18 +207,9 @@
                 }
             }
         }
-    },
-    "title": [
-        {
-            "text": "Weight",
-            "subtext": "\u6210\u5458\u4f53\u91cd\u5206\u5e03(kg)",
-            "top": "80%",
-            "padding": 5,
-            "itemGap": 10
-        }
-    ]
+    }
 };
-        chart_991e48cac11f425ab1cda9318e0771d5.setOption(option_991e48cac11f425ab1cda9318e0771d5);
+        chart_5ac3e12fc5594d6697ab9102ab255f86.setOption(option_5ac3e12fc5594d6697ab9102ab255f86);
     </script>
 </body>
 </html>

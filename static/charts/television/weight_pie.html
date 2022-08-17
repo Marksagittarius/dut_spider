@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="e214169eee3c4b50929db6534fd807a5" class="chart-container" style="width:700px; height:500px;"></div>
+    <div id="b43f840577534552b6b5ec6562bd0df8" class="chart-container" style="width:700px; height:500px;"></div>
     <script>
-        var chart_e214169eee3c4b50929db6534fd807a5 = echarts.init(
-            document.getElementById('e214169eee3c4b50929db6534fd807a5'), 'light', {renderer: 'canvas'});
-        var option_e214169eee3c4b50929db6534fd807a5 = {
+        var chart_b43f840577534552b6b5ec6562bd0df8 = echarts.init(
+            document.getElementById('b43f840577534552b6b5ec6562bd0df8'), 'light', {renderer: 'canvas'});
+        var option_b43f840577534552b6b5ec6562bd0df8 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -22,70 +22,108 @@
     "animationDelayUpdate": 0,
     "series": [
         {
-            "type": "bar",
-            "legendHoverLink": true,
+            "type": "pie",
+            "clockwise": true,
             "data": [
-                13,
-                2,
-                7,
-                9,
-                2
+                {
+                    "name": "172",
+                    "value": 2
+                },
+                {
+                    "name": "183",
+                    "value": 2
+                },
+                {
+                    "name": "184",
+                    "value": 2
+                },
+                {
+                    "name": "180",
+                    "value": 7
+                },
+                {
+                    "name": "182",
+                    "value": 2
+                },
+                {
+                    "name": "167",
+                    "value": 3
+                },
+                {
+                    "name": "189",
+                    "value": 1
+                },
+                {
+                    "name": "168",
+                    "value": 1
+                },
+                {
+                    "name": "179",
+                    "value": 3
+                },
+                {
+                    "name": "178",
+                    "value": 1
+                },
+                {
+                    "name": "170",
+                    "value": 4
+                },
+                {
+                    "name": "162",
+                    "value": 2
+                },
+                {
+                    "name": "\u672a\u77e5",
+                    "value": 6
+                },
+                {
+                    "name": "188",
+                    "value": 1
+                },
+                {
+                    "name": "185",
+                    "value": 2
+                },
+                {
+                    "name": "177",
+                    "value": 2
+                }
             ],
-            "showBackground": true,
-            "barMinHeight": 0,
-            "barCategoryGap": "20%",
-            "barGap": "30%",
-            "large": false,
-            "largeThreshold": 400,
-            "seriesLayoutBy": "column",
-            "datasetIndex": 0,
-            "clip": true,
-            "zlevel": 0,
-            "z": 2,
+            "radius": "77%",
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "roseType": "area",
             "label": {
                 "show": true,
                 "position": "top",
                 "margin": 8
-            },
-            "markLine": {
-                "silent": false,
-                "precision": 2,
-                "label": {
-                    "show": true,
-                    "position": "top",
-                    "margin": 8
-                },
-                "data": [
-                    {
-                        "name": "\u6700\u5c0f\u503c",
-                        "type": "min"
-                    },
-                    {
-                        "name": "\u6700\u5927\u503c",
-                        "type": "max"
-                    },
-                    {
-                        "name": "\u5e73\u5747\u503c",
-                        "type": "average"
-                    }
-                ]
-            },
-            "rippleEffect": {
-                "show": true,
-                "brushType": "stroke",
-                "scale": 2.5,
-                "period": 4
             }
         }
     ],
     "legend": [
         {
             "data": [
-                ""
+                "172",
+                "183",
+                "184",
+                "180",
+                "182",
+                "167",
+                "189",
+                "168",
+                "179",
+                "178",
+                "170",
+                "162",
+                "\u672a\u77e5",
+                "188",
+                "185",
+                "177"
             ],
-            "selected": {
-                "": true
-            },
+            "selected": {},
             "show": true,
             "padding": 5,
             "itemGap": 10,
@@ -110,74 +148,22 @@
         "borderWidth": 0,
         "padding": 5
     },
-    "xAxis": [
-        {
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "gridIndex": 0,
-            "inverse": false,
-            "offset": 0,
-            "splitNumber": 5,
-            "minInterval": 0,
-            "splitLine": {
-                "show": false,
-                "lineStyle": {
-                    "show": true,
-                    "width": 1,
-                    "opacity": 1,
-                    "curveness": 0,
-                    "type": "solid"
-                }
-            },
-            "data": [
-                "O\u578b",
-                "AB\u578b",
-                "A\u578b",
-                "B\u578b",
-                "\u672a\u77e5"
-            ]
-        }
-    ],
-    "yAxis": [
-        {
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "gridIndex": 0,
-            "inverse": false,
-            "offset": 0,
-            "splitNumber": 5,
-            "minInterval": 0,
-            "splitLine": {
-                "show": false,
-                "lineStyle": {
-                    "show": true,
-                    "width": 1,
-                    "opacity": 1,
-                    "curveness": 0,
-                    "type": "solid"
-                }
-            }
-        }
-    ],
     "title": [
         {
-            "text": "Blood Type",
-            "subtext": "\u6210\u5458\u8840\u578b\u5206\u5e03",
-            "left": "35%",
+            "text": "Weight",
+            "subtext": "\u6f14\u5458\u4f53\u91cd\u5206\u5e03(kg)",
+            "top": "80%",
             "padding": 5,
             "itemGap": 10
         }
     ],
     "toolbox": {
         "show": true,
-        "orient": "vertical",
+        "orient": "horizontal",
         "itemSize": 15,
         "itemGap": 10,
-        "left": "1%",
+        "left": "80%",
+        "top": "10%",
         "feature": {
             "saveAsImage": {
                 "type": "png",
@@ -248,7 +234,7 @@
         }
     }
 };
-        chart_e214169eee3c4b50929db6534fd807a5.setOption(option_e214169eee3c4b50929db6534fd807a5);
+        chart_b43f840577534552b6b5ec6562bd0df8.setOption(option_b43f840577534552b6b5ec6562bd0df8);
     </script>
 </body>
 </html>
