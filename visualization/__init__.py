@@ -4,7 +4,7 @@ pos_top = "80%"
 
 
 class Router:
-    def __inti__(self):
+    def __init__(self):
         self.charts = []
 
     def append_router(self, path):
