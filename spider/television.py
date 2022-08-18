@@ -3,8 +3,9 @@ from multiprocessing import cpu_count, Process, JoinableQueue
 from config.spider import base_url_of_television
 from model import Actor, AudienceFormUint
 from bs4 import BeautifulSoup
-from . import query_html
 from . import reg
+import logging
+import urllib
 import time
 import re
 
@@ -14,7 +15,44 @@ cpu_num = cpu_count()
 audience_form_list = []
 
 
+def query_html(url):
+    """ Return the html context of the given url.
+    
+    Args:
+        url (string): The url of the given website.
+    
+    Returns:
+        html_result(string): The html context of the given website.
+    """
+
+    header_config = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"}
+    request = urllib.request.Request(url, headers=header_config)
+    html_result = ""
+    try:
+        html_result = urllib.request.urlopen(request).read().decode("utf-8")
+    except urllib.error.URLError as url_error:
+        if hasattr(url_error, "reason"):
+            logging.error(url_error.reason)
+    return html_result
+
+
 def consumer(queue, name, ans):
+    """ The handler of the consumer thread. Get the base information of the actress from the given url, transform
+    the separate information into the model (Actor) which will be stored
+    in the "JoinableQueue" from the input data.
+
+    Args:
+        @queue (JoinableQueue<string>): A special inheritance of the data-structure
+        Queue which implements the feature of sharing memory as well as the consistence
+        in multiple threads, carrying the list of the url strings.
+        @name (string): The id of the consumer thread.
+        @ans (JoinableQueue<Actor>): Collecting the list of Actress which is the result of
+            the function "parse_actor_html(base_html: string)"
+
+    Returns:
+        (void)
+    """
     while True:
         url = queue.get()
         print("%s is working" % (name))
@@ -27,13 +65,38 @@ def consumer(queue, name, ans):
 
 
 def producer(queue, name, url_list):
+    """ The handler of the producer thread.
+    Store the list of url in the task queue which will be distributed
+    to the consumer threads.
+    
+    Args:
+        @queue (JoinableQueue<string>): The task queue which will be sent
+        to the consumer thread.
+        @name (string): The id of the thread.
+        @url_list ([]string): The list of the url.
+        
+    Returns:
+        (void)
+    """
+    
     for url in url_list:
         print("%s is working" % (name))
         queue.put(url)
     queue.join()
 
 
-def parse_category_html(base_html):
+def parse_television_category_html(base_html):
+    """ Parse the html file of the given category page. Get the list of the hyperlink url
+    from the given html element. Make the preparation of the dispatch of the multiple thread
+    tasks about web-spider and collect the whole result of the spider tasks which will be sent
+    to the layer of storage.
+
+    Args:
+        @base_html (string): The url of the category web-page.
+
+    Returns:
+        (void)
+    """
     soup = BeautifulSoup(base_html, "html.parser")
     for item in soup.find_all("ul", {"class": "actorList"}):
         hyper_link = re.findall(reg.is_actor_hyper_link, str(item))
@@ -71,9 +134,20 @@ def parse_category_html(base_html):
     while not ans.empty():
         actor_list.append(ans.get())
     store_actor_as_json(actor_list)
+    parse_television_data_form(base_html)
 
 
 def parse_actor_html(base_html):
+    """ Parse the given html file and get the base information of the actress, which
+    will be stored in the form of structure Actor.
+
+    Args:
+        @base_html (string): The html file of the Wiki page of the Actor.
+
+    Returns:
+        @actress (Actor): The structure describing the base information of the Actor.
+    """
+    
     soup = BeautifulSoup(base_html, "html.parser")
     left_element = soup.find("dl", class_="basicInfo-block basicInfo-left")
     right_element = soup.find("dl", class_="basicInfo-block basicInfo-right")
