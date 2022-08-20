@@ -165,6 +165,10 @@ def render_line_of_audience_rate():
     
 
 def render_all_about_television():
+    """ Rendering all the components of the router "/television".
+
+    """
+    
     router_list.clear()
     render_pie_of_height()
     render_pie_of_weight()

@@ -139,6 +139,10 @@ def render_bar_of_constellation():
     
     
 def render_all_about_actress():
+    """ Rendering all the components of the router "/actress".
+    
+    """
+    
     router_list.clear()
     render_pie_of_height()
     render_pie_of_weight()

@@ -1,23 +1,5 @@
 [
     {
-        "name": "乔欣",
-        "nation": "汉族",
-        "birthday": "1993年11月23日",
-        "constellation": "射手座",
-        "blood_type": "B型",
-        "height": "172",
-        "weight": "47"
-    },
-    {
-        "name": "魏大勋",
-        "nation": "汉族",
-        "birthday": "1989年4月12日",
-        "constellation": "白羊座",
-        "blood_type": "B型",
-        "height": "183",
-        "weight": "未知"
-    },
-    {
         "name": "庞瀚辰",
         "nation": "汉族",
         "birthday": "1990年10月28日",
@@ -25,15 +7,6 @@
         "blood_type": "O型",
         "height": "184",
         "weight": "未知"
-    },
-    {
-        "name": "赵又廷",
-        "nation": "汉族",
-        "birthday": "1984年9月25日",
-        "constellation": "天秤座",
-        "blood_type": "AB型",
-        "height": "180",
-        "weight": "68"
     },
     {
         "name": "霍政谚",
@@ -45,6 +18,24 @@
         "weight": "67"
     },
     {
+        "name": "赵又廷",
+        "nation": "汉族",
+        "birthday": "1984年9月25日",
+        "constellation": "天秤座",
+        "blood_type": "AB型",
+        "height": "180",
+        "weight": "68"
+    },
+    {
+        "name": "乔欣",
+        "nation": "汉族",
+        "birthday": "1993年11月23日",
+        "constellation": "射手座",
+        "blood_type": "B型",
+        "height": "172",
+        "weight": "47"
+    },
+    {
         "name": "白敬亭",
         "nation": "满族",
         "birthday": "1993年10月15日",
@@ -52,6 +43,15 @@
         "blood_type": "O型",
         "height": "183",
         "weight": "75"
+    },
+    {
+        "name": "魏大勋",
+        "nation": "汉族",
+        "birthday": "1989年4月12日",
+        "constellation": "白羊座",
+        "blood_type": "B型",
+        "height": "183",
+        "weight": "未知"
     },
     {
         "name": "左小青",
@@ -63,21 +63,21 @@
         "weight": "50"
     },
     {
-        "name": "刘畅",
-        "nation": "汉族",
-        "birthday": "1986年10月10日",
-        "constellation": "天秤座",
-        "blood_type": "未知",
-        "height": "189",
-        "weight": "未知"
-    },
-    {
         "name": "郝平",
         "nation": "汉",
         "birthday": "1970年2月19日",
         "constellation": "双鱼座",
         "blood_type": "未知",
         "height": "182",
+        "weight": "未知"
+    },
+    {
+        "name": "刘畅",
+        "nation": "汉族",
+        "birthday": "1986年10月10日",
+        "constellation": "天秤座",
+        "blood_type": "未知",
+        "height": "189",
         "weight": "未知"
     },
     {
@@ -88,6 +88,15 @@
         "blood_type": "O型",
         "height": "168",
         "weight": "未知"
+    },
+    {
+        "name": "魏智",
+        "nation": "汉族",
+        "birthday": "1984年10月3日",
+        "constellation": "天秤座",
+        "blood_type": "O型",
+        "height": "184",
+        "weight": "74"
     },
     {
         "name": "赵晓苏",
@@ -108,15 +117,6 @@
         "weight": "65"
     },
     {
-        "name": "魏智",
-        "nation": "汉族",
-        "birthday": "1984年10月3日",
-        "constellation": "天秤座",
-        "blood_type": "O型",
-        "height": "184",
-        "weight": "74"
-    },
-    {
         "name": "任东霖",
         "nation": "汉",
         "birthday": "1980年2月3日",
@@ -124,42 +124,6 @@
         "blood_type": "A型",
         "height": "180",
         "weight": "67"
-    },
-    {
-        "name": "吕一",
-        "nation": "汉族",
-        "birthday": "1984年1月8日",
-        "constellation": "摩羯座",
-        "blood_type": "B型",
-        "height": "170",
-        "weight": "52"
-    },
-    {
-        "name": "卜冠今",
-        "nation": "汉族",
-        "birthday": "1994年5月25日",
-        "constellation": "双子座",
-        "blood_type": "未知",
-        "height": "162",
-        "weight": "45"
-    },
-    {
-        "name": "王玉宁",
-        "nation": "未知",
-        "birthday": "1978年5月15日",
-        "constellation": "金牛座",
-        "blood_type": "未知",
-        "height": "未知",
-        "weight": "未知"
-    },
-    {
-        "name": "赵昱童",
-        "nation": "未知",
-        "birthday": "11月25日",
-        "constellation": "射手座",
-        "blood_type": "未知",
-        "height": "188",
-        "weight": "84"
     },
     {
         "name": "王鹤润",
@@ -171,28 +135,28 @@
         "weight": "未知"
     },
     {
-        "name": "梁振伦",
+        "name": "吕一",
         "nation": "汉族",
-        "birthday": "1990年4月22日",
-        "constellation": "金牛座",
-        "blood_type": "A型",
-        "height": "180",
-        "weight": "65"
-    },
-    {
-        "name": "代旭",
-        "nation": "未知",
-        "birthday": "1989年10月28日",
-        "constellation": "天蝎座",
+        "birthday": "1984年1月8日",
+        "constellation": "摩羯座",
         "blood_type": "B型",
-        "height": "180",
-        "weight": "62"
+        "height": "170",
+        "weight": "52"
     },
     {
-        "name": "孙楚鸿",
+        "name": "赵昱童",
         "nation": "未知",
-        "birthday": "1993年10月28日",
-        "constellation": "天蝎座",
+        "birthday": "11月25日",
+        "constellation": "射手座",
+        "blood_type": "未知",
+        "height": "188",
+        "weight": "84"
+    },
+    {
+        "name": "王玉宁",
+        "nation": "未知",
+        "birthday": "1978年5月15日",
+        "constellation": "金牛座",
         "blood_type": "未知",
         "height": "未知",
         "weight": "未知"
@@ -207,6 +171,15 @@
         "weight": "未知"
     },
     {
+        "name": "梁振伦",
+        "nation": "汉族",
+        "birthday": "1990年4月22日",
+        "constellation": "金牛座",
+        "blood_type": "A型",
+        "height": "180",
+        "weight": "65"
+    },
+    {
         "name": "张艺文",
         "nation": "满族",
         "birthday": "1994年5月27日",
@@ -216,13 +189,31 @@
         "weight": "未知"
     },
     {
-        "name": "赵岩松",
+        "name": "代旭",
+        "nation": "未知",
+        "birthday": "1989年10月28日",
+        "constellation": "天蝎座",
+        "blood_type": "B型",
+        "height": "180",
+        "weight": "62"
+    },
+    {
+        "name": "卜冠今",
         "nation": "汉族",
-        "birthday": "4月26日",
-        "constellation": "金牛座",
+        "birthday": "1994年5月25日",
+        "constellation": "双子座",
         "blood_type": "未知",
-        "height": "179",
-        "weight": "未知"
+        "height": "162",
+        "weight": "45"
+    },
+    {
+        "name": "夏星",
+        "nation": "汉族",
+        "birthday": "1988年11月14日",
+        "constellation": "天蝎座",
+        "blood_type": "未知",
+        "height": "170",
+        "weight": "55"
     },
     {
         "name": "赵煊",
@@ -234,12 +225,12 @@
         "weight": "65"
     },
     {
-        "name": "向昊",
-        "nation": "汉族",
-        "birthday": "1995年10月8日",
-        "constellation": "天秤座",
+        "name": "孙楚鸿",
+        "nation": "未知",
+        "birthday": "1993年10月28日",
+        "constellation": "天蝎座",
         "blood_type": "未知",
-        "height": "185",
+        "height": "未知",
         "weight": "未知"
     },
     {
@@ -252,22 +243,31 @@
         "weight": "65"
     },
     {
-        "name": "夏星",
+        "name": "向昊",
         "nation": "汉族",
-        "birthday": "1988年11月14日",
-        "constellation": "天蝎座",
+        "birthday": "1995年10月8日",
+        "constellation": "天秤座",
         "blood_type": "未知",
-        "height": "170",
-        "weight": "55"
+        "height": "185",
+        "weight": "未知"
     },
     {
-        "name": "毕瀚文",
-        "nation": "未知",
-        "birthday": "1980年7月30日",
-        "constellation": "狮子座",
+        "name": "王紫璇",
+        "nation": "汉族",
+        "birthday": "1992年11月12日",
+        "constellation": "天蝎座",
+        "blood_type": "O型",
+        "height": "172",
+        "weight": "48"
+    },
+    {
+        "name": "赵岩松",
+        "nation": "汉族",
+        "birthday": "4月26日",
+        "constellation": "金牛座",
         "blood_type": "未知",
-        "height": "180",
-        "weight": "70"
+        "height": "179",
+        "weight": "未知"
     },
     {
         "name": "朱帅",
@@ -279,6 +279,15 @@
         "weight": "96"
     },
     {
+        "name": "毕瀚文",
+        "nation": "未知",
+        "birthday": "1980年7月30日",
+        "constellation": "狮子座",
+        "blood_type": "未知",
+        "height": "180",
+        "weight": "70"
+    },
+    {
         "name": "吴陈超",
         "nation": "汉族",
         "birthday": "1988年2月20日",
@@ -286,15 +295,6 @@
         "blood_type": "O型",
         "height": "177",
         "weight": "67"
-    },
-    {
-        "name": "王紫璇",
-        "nation": "汉族",
-        "birthday": "1992年11月12日",
-        "constellation": "天蝎座",
-        "blood_type": "O型",
-        "height": "172",
-        "weight": "48"
     },
     {
         "name": "刘顾浩",
@@ -313,15 +313,6 @@
         "blood_type": "未知",
         "height": "179",
         "weight": "63"
-    },
-    {
-        "name": "茹天",
-        "nation": "未知",
-        "birthday": "1980年10月31日",
-        "constellation": "天蝎座",
-        "blood_type": "O型",
-        "height": "162",
-        "weight": "未知"
     },
     {
         "name": "卢艺",
@@ -348,6 +339,15 @@
         "constellation": "天蝎座",
         "blood_type": "未知",
         "height": "未知",
+        "weight": "未知"
+    },
+    {
+        "name": "茹天",
+        "nation": "未知",
+        "birthday": "1980年10月31日",
+        "constellation": "天蝎座",
+        "blood_type": "O型",
+        "height": "162",
         "weight": "未知"
     },
     {

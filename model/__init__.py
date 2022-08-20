@@ -1,5 +1,5 @@
 class Actress:
-
+    
     def __init__(self, name, nation, birthday, blood_type, constellation, height, weight):
         self.name = name
         self.nation = nation
