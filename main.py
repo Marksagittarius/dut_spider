@@ -1,4 +1,4 @@
-from config.net import port as default_port , host as default_host
+from config.net import port as default_port, host as default_host
 import visualization.television as television
 import visualization.epidemic as epidemic
 import visualization.actress as actress
