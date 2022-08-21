@@ -18,5 +18,10 @@ async def render_television_page(request: Request):
     return templates.TemplateResponse("television.html", {"request": request})
 
 
+@app.get("/epidemic")
+async def render_epidemic_page(request: Request):
+    return templates.TemplateResponse("epidemic.html", {"request": request})
+
+
 def get_router():
     return app

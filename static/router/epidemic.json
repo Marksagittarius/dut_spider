@@ -1,0 +1,10 @@
+{
+    "charts": [
+        "current_confirmed_case_map",
+        "total_local_confirmed_case_map",
+        "dead_case_map",
+        "cured_case_map",
+        "high_danger_bar",
+        "mid_danger_bar"
+    ]
+}

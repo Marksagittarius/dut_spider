@@ -5,6 +5,7 @@
         "nation_pie",
         "blood_type_bar",
         "constellation_bar",
-        "audience_rate_line"
+        "audience_rate_line",
+        "audience_share_line"
     ]
 }

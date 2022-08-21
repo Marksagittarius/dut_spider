@@ -17,3 +17,5 @@ is_height = re.compile(r'<dt class="basicInfo-item name" id="basic-name">身\s*�
 is_weight = re.compile(r'<dt class="basicInfo-item name" id="basic-name">体\s*重</dt>\n<dd class="basicInfo-item value">\n.*?kg')
 
 is_actor_hyper_link = re.compile(r'<dt><a data-lemmaid=".*?" href=".*?" target="_blank">')
+
+is_epidemic_data = re.compile(r'window.getAreaStat = ([\s\S]*?)</script>')

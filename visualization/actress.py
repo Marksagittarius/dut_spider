@@ -24,7 +24,7 @@ def render_pie_of_height():
         data.append(height_stat[key])
         
     pie = Pie(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add("", [list(z) for z in zip(cate, data)], radius="70%").set_global_opts(
-        title_opts=opts.TitleOpts(title="Height", subtitle="成员身高分布(cm)", pos_top=pos_top),
+        title_opts=opts.TitleOpts(title="Height", subtitle="成员身高分布 (cm)", pos_top=pos_top),
         toolbox_opts=opts.ToolboxOpts(is_show=True, pos_top="10%")
     )
     pie.render("static/charts/actress/height_pie.html")
@@ -46,7 +46,7 @@ def render_pie_of_weight():
         data.append(weight_stat[key])
         
     pie = Pie(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add("", [list(z) for z in zip(cate, data)], rosetype="area", radius="77%").set_global_opts(
-        title_opts=opts.TitleOpts(title="Weight", subtitle="成员体重分布(kg)", pos_top=pos_top),
+        title_opts=opts.TitleOpts(title="Weight", subtitle="成员体重分布 (kg)", pos_top=pos_top),
         toolbox_opts=opts.ToolboxOpts(is_show=True, pos_top="10%")
     )
     pie.render("static/charts/actress/weight_pie.html")
@@ -68,7 +68,7 @@ def render_pie_of_nation():
         data.append(nation_stat[key])
         
     pie = Pie(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add("", [list(z) for z in zip(cate, data)], radius=["25%", "70%"]).set_global_opts(
-        title_opts=opts.TitleOpts(title="Nation", subtitle="成员民族分布", pos_top=pos_top),
+        title_opts=opts.TitleOpts(title="Nation", subtitle="成员民族分布 (人数)", pos_top=pos_top),
         toolbox_opts=opts.ToolboxOpts(is_show=True, pos_top="5%")
     )
     pie.render("static/charts/actress/nation_pie.html")
@@ -90,7 +90,7 @@ def render_bar_of_blood_type():
         data.append(blood_type_stat[key])
         
     bar = Bar(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add_xaxis(cate).add_yaxis('', data, is_show_background=True).set_global_opts(
-        title_opts=opts.TitleOpts(title="Blood Type", subtitle="成员血型分布", pos_left="35%"),
+        title_opts=opts.TitleOpts(title="Blood Type", subtitle="成员血型分布 (人数)", pos_left="35%"),
         toolbox_opts=opts.ToolboxOpts(is_show=True, orient="vertical", pos_left="1%"),
     ).set_series_opts(
         markline_opts=opts.MarkLineOpts(
@@ -121,7 +121,7 @@ def render_bar_of_constellation():
         data.append(constellation_stat[key])
         
     bar = Bar(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add_xaxis(cate).add_yaxis('', data, is_show_background=True, category_gap="10%").set_global_opts(
-        title_opts=opts.TitleOpts(title="Constellation", subtitle="成员星座分布", pos_left="35%"),
+        title_opts=opts.TitleOpts(title="Constellation", subtitle="成员星座分布 (人数)", pos_left="35%"),
         toolbox_opts=opts.ToolboxOpts(is_show=True, orient="vertical", pos_left="1%"),
         datazoom_opts=opts.DataZoomOpts()
     ).set_series_opts(

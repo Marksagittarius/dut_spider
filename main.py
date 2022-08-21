@@ -1,4 +1,5 @@
 import visualization.television as television
+import visualization.epidemic as epidemic
 import visualization.actress as actress
 from spider import start_all_tasks
 from optparse import OptionParser
@@ -25,6 +26,7 @@ def main():
     if options.deploy:
         actress.render_all_about_actress()
         television.render_all_about_television()
+        epidemic.render_all_about_epidemic()
         uvicorn.run(app, host=host, port=port)
     elif options.crawl:
         start_all_tasks()
