@@ -8,18 +8,19 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
-# 1. 题目1
+# Test1
 @app.get("/actress")
 async def render_actress_page(request: Request):
     return templates.TemplateResponse("actress.html", {"request": request})
 
 
-# 2. 题目2
+# Test2
 @app.get("/television")
 async def render_television_page(request: Request):
     return templates.TemplateResponse("television.html", {"request": request})
 
 
+# Test 3
 @app.get("/epidemic")
 async def render_epidemic_page(request: Request):
     return templates.TemplateResponse("epidemic.html", {"request": request})
