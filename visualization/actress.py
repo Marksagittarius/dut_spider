@@ -114,7 +114,7 @@ def render_bar_of_constellation():
         if actress.constellation in constellation_stat:
             constellation_stat[actress.constellation] += 1
         else:
-            constellation_stat[actress.constellation] = 1
+            constellation_stat[actress.constellation]= 1
  
     for key in constellation_stat:
         cate.append(key)
