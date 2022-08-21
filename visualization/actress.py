@@ -143,6 +143,7 @@ def render_all_about_actress():
     
     """
     
+    print("Render /actress")
     router_list.clear()
     render_pie_of_height()
     render_pie_of_weight()

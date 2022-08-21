@@ -188,6 +188,7 @@ def render_all_about_television():
 
     """
     
+    print("Render /television")
     router_list.clear()
     render_pie_of_height()
     render_pie_of_weight()

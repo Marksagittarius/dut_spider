@@ -197,6 +197,7 @@ def render_all_about_epidemic():
 
     """
 
+    print("Render /epidemic")
     router_list.clear()
     render_map_of_current_confirmed_num()
     render_map_of_total_local_confirmed_num()
