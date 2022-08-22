@@ -11,6 +11,15 @@ body {
     box-shadow: 2px 2px 1px #212020;
 }
 
+.chart_box_large {
+    margin: 10px;
+    height: 520px;
+    width: 1200px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 1px #212020;
+}
+
 .chart {
     margin:0 10px;
 }

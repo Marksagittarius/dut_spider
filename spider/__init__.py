@@ -1,6 +1,8 @@
 from config.spider import start_url_of_actress, start_url_of_television
-from .actress import parse_actress_category_html
 from .television import parse_television_category_html
+from .epidemic import parse_epidemic_summary_stat
+from .actress import parse_actress_category_html
+from config.spider import start_url_of_epidemic
 import urllib.request
 import urllib.error
 import logging
@@ -13,7 +15,7 @@ def query_html(url):
         url (string): The url of the given website.
     
     Returns:
-        html_result(string): The html context of the given website.
+        html_result (string): The html context of the given website.
     """
       
     header_config = {
@@ -33,8 +35,11 @@ def start_all_tasks():
     
     """
     
-    print("Task: Actress")
+    print("[Task: Actress]")
     parse_actress_category_html(query_html(start_url_of_actress))
     
-    print("Task: Television")
+    print("[Task: Television]")
     parse_television_category_html(query_html(start_url_of_television))
+    
+    print("[Task: Epidemic]")
+    parse_epidemic_summary_stat(query_html(start_url_of_epidemic))

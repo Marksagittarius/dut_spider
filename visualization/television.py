@@ -27,7 +27,7 @@ def render_pie_of_height():
 
     pie = Pie(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add("", [list(z) for z in zip(cate, data)], radius="70%").set_global_opts(
         title_opts=opts.TitleOpts(
-            title="Height", subtitle="演员身高分布(cm)", pos_top=pos_top),
+            title="Height", subtitle="演员身高分布 (cm)", pos_top=pos_top),
         toolbox_opts=opts.ToolboxOpts(is_show=True, pos_top="10%")
     )
     pie.render("static/charts/television/height_pie.html")
@@ -50,7 +50,7 @@ def render_pie_of_weight():
 
     pie = Pie(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add("", [list(z) for z in zip(cate, data)], rosetype="area", radius="77%").set_global_opts(
         title_opts=opts.TitleOpts(
-            title="Weight", subtitle="演员体重分布(kg)", pos_top=pos_top),
+            title="Weight", subtitle="演员体重分布 (kg)", pos_top=pos_top),
         toolbox_opts=opts.ToolboxOpts(is_show=True, pos_top="10%")
     )
     pie.render("static/charts/television/weight_pie.html")
@@ -73,7 +73,7 @@ def render_pie_of_nation():
 
     pie = Pie(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add("", [list(z) for z in zip(cate, data)], radius=["25%", "70%"]).set_global_opts(
         title_opts=opts.TitleOpts(
-            title="Nation", subtitle="演员民族分布", pos_top=pos_top),
+            title="Nation", subtitle="演员民族分布 (人数)", pos_top=pos_top),
         toolbox_opts=opts.ToolboxOpts(is_show=True)
     )
     pie.render("static/charts/television/nation_pie.html")
@@ -96,7 +96,7 @@ def render_bar_of_blood_type():
 
     bar = Bar(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add_xaxis(cate).add_yaxis('', data, is_show_background=True).set_global_opts(
         title_opts=opts.TitleOpts(
-            title="Blood Type", subtitle="演员血型分布", pos_left="35%"),
+            title="Blood Type", subtitle="演员血型分布 (人数)", pos_left="35%"),
         toolbox_opts=opts.ToolboxOpts(is_show=True, orient="vertical", pos_left="1%"),
     ).set_series_opts(
         markline_opts=opts.MarkLineOpts(
@@ -128,7 +128,7 @@ def render_bar_of_constellation():
 
     bar = Bar(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add_xaxis(cate).add_yaxis('', data, is_show_background=True, category_gap="10%").set_global_opts(
         title_opts=opts.TitleOpts(
-            title="Constellation", subtitle="演员星座分布", pos_left="35%"),
+            title="Constellation", subtitle="演员星座分布 (人数)", pos_left="35%"),
         toolbox_opts=opts.ToolboxOpts(is_show=True, orient="vertical", pos_left="1%"),
         datazoom_opts=opts.DataZoomOpts()
     ).set_series_opts(
@@ -156,7 +156,7 @@ def render_line_of_audience_rate():
     
     line = Line(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add_xaxis(dates).add_yaxis(series_name="东方卫视CSM59城收视", y_axis=rate1).set_global_opts(
         title_opts=opts.TitleOpts(
-            title="Audience Rate", subtitle="两卫视收视率变化及对比", pos_left="35%", pos_top="7%"),
+            title="Audience Rate", subtitle="两卫视收视率变化及对比 (%)", pos_left="35%", pos_top="7%"),
         toolbox_opts=opts.ToolboxOpts(is_show=True),
         datazoom_opts=opts.DataZoomOpts()
     ).add_yaxis(series_name="浙江卫视CSM59城收视", y_axis=rate2)
@@ -164,11 +164,31 @@ def render_line_of_audience_rate():
     router_list.append_router("audience_rate_line")
     
 
+def render_line_of_audience_share():
+    dates = []
+    rate1 = []
+    rate2 = []
+    for audience_form_unit in audience_form:
+        dates.append(audience_form_unit.date)
+        rate1.append(audience_form_unit.share1)
+        rate2.append(audience_form_unit.share2)
+
+    line = Line(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add_xaxis(dates).add_yaxis(series_name="东方卫视CSM59城收视", y_axis=rate1).set_global_opts(
+        title_opts=opts.TitleOpts(
+            title="Audience Share", subtitle="两卫视市场占有变化及对比 (%)", pos_left="35%", pos_top="7%"),
+        toolbox_opts=opts.ToolboxOpts(is_show=True),
+        datazoom_opts=opts.DataZoomOpts()
+    ).add_yaxis(series_name="浙江卫视CSM59城收视", y_axis=rate2)
+    line.render("static/charts/television/audience_share_line.html")
+    router_list.append_router("audience_share_line")
+    
+    
 def render_all_about_television():
     """ Rendering all the components of the router "/television".
 
     """
     
+    print("Render /television")
     router_list.clear()
     render_pie_of_height()
     render_pie_of_weight()
@@ -176,5 +196,6 @@ def render_all_about_television():
     render_bar_of_blood_type()
     render_bar_of_constellation()
     render_line_of_audience_rate()
+    render_line_of_audience_share()
     register_router(router_list, "static/router/television.json")
     router_list.clear()

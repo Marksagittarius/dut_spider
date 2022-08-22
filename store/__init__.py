@@ -1,10 +1,11 @@
-from model import Actress, AudienceFormUint
+from model import Actress, AudienceFormUint, EpidemicStatOfProvince
 import json
 import os
 
 
-filename_of_actress = "store/actress.json"
 filename_of_actor = "store/actor.json"
+filename_of_actress = "store/actress.json"
+filename_of_epidemic = "store/epidemic.json"
 filename_of_audience_form = "store/audience.json"
 
 
@@ -101,7 +102,13 @@ def audience_form_unit_dict_to_object(dict):
 
     audience_form = []
     for elem in dict:
-        audience_form.append(AudienceFormUint(date=elem["date"], rate1=elem["rate1"], share1=elem["share1"], rank1=elem["rank1"], rate2=elem["rate2"], share2=elem["share2"], rank2=elem["rank2"]))
+        audience_form.append(AudienceFormUint(date=elem["date"],
+                                              rate1=elem["rate1"],
+                                              share1=elem["share1"],
+                                              rank1=elem["rank1"],
+                                              rate2=elem["rate2"],
+                                              share2=elem["share2"],
+                                              rank2=elem["rank2"]))
     
     return audience_form
     
@@ -221,3 +228,60 @@ def get_audience_form():
     with open(filename_of_audience_form, encoding="utf-8") as file_pointer:
         audience_form = json.load(file_pointer)
     return audience_form_unit_dict_to_object(audience_form)
+
+
+def store_epidemic_data(epidemic_data):
+    """ Store the list of epidemic data in the JSON file.
+
+    Args:
+        @epidemic_data (dict): The data of epidemic.
+
+    Returns:
+        (void)
+    """
+
+    if os.path.exists(filename_of_epidemic):
+        os.remove(filename_of_epidemic)
+
+    with open(filename_of_epidemic, "a+", encoding="utf-8") as file_pointer:
+        json.dump(epidemic_data, file_pointer, cls=custom_encoder,
+                  indent=4, ensure_ascii=False)
+    file_pointer.close()
+    
+    
+def get_epidemic_data():
+    """ Get the list of the EpidemicStatOfProvince from the JSON file.
+
+    Returns:
+        @audience_form ([]EpidemicStatOfProvince): The list of EpidemicStatOfProvince.
+    """
+    province_data_list = []
+    if not os.path.exists(filename_of_epidemic):
+        return province_data_list
+
+    with open(filename_of_epidemic, encoding="utf-8") as file_pointer:
+        province_data_list = json.load(file_pointer)
+    return epidemic_data_to_object(province_data_list)
+
+
+def epidemic_data_to_object(dict):
+    """ Transform the dict of epidemic data into the list of the structure of EpidemicStatOfProvince.
+    
+    Args:
+        @dict ([]dict): The list of the dict of EpidemicStatOfProvince.
+    
+    Returns:
+        @actress_list ([]EpidemicStatOfProvince): The list of EpidemicStatOfProvince instance.
+    """
+
+    province_data_list = []
+    for elem in dict:
+        province_data_list.append(EpidemicStatOfProvince(province_name=elem["provinceShortName"],
+                                                         current_confirmed_num=elem["currentConfirmedCount"],
+                                                         total_local_confirmed_cases=elem["confirmedCount"],
+                                                         cumulative_death_toll=elem["deadCount"],
+                                                         cumulative_cured_toll=elem["curedCount"],
+                                                         suspected_num=elem["suspectedCount"],
+                                                         high_danger_count=elem["highDangerCount"],
+                                                         mid_danger_count=elem["midDangerCount"]))
+    return province_data_list
