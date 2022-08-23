@@ -47,7 +47,7 @@ def consumer(queue, name, ans):
         in multiple threads, carrying the list of the url strings.
         @name (string): The id of the consumer thread.
         @ans (JoinableQueue<Actress>): Collecting the list of Actress which is the result of
-            the function "parse_actress_html(base_html: string)"
+            the function "parse_actress_html(base_html: string)".
             
     Returns:
         (void)

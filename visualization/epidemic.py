@@ -1,5 +1,5 @@
 from store import get_epidemic_data, register_router
-from . import Router, height, width
+from .basic import Router, height, width
 from pyecharts.globals import ThemeType
 from pyecharts import options as opts
 from pyecharts.charts import Map, Bar

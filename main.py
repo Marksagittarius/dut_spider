@@ -1,7 +1,5 @@
 from config.net import port as default_port, host as default_host
-import visualization.television as television
-import visualization.epidemic as epidemic
-import visualization.actress as actress
+from visualization import render_all
 from spider import start_all_tasks
 from optparse import OptionParser
 from server import get_router
@@ -30,9 +28,7 @@ def main():
     elif options.crawl:
         start_all_tasks()
     elif options.render:
-        actress.render_all_about_actress()
-        television.render_all_about_television()
-        epidemic.render_all_about_epidemic()
+        render_all()
 
 
 if __name__ == "__main__":

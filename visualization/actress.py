@@ -2,7 +2,7 @@ from store import get_actress_stat, register_router
 from pyecharts.globals import ThemeType
 from pyecharts.charts import Pie, Bar
 from pyecharts import options as opts
-from . import Router, height, width, pos_top
+from .basic import Router, height, width, pos_top
 
 
 source_data = get_actress_stat()
@@ -114,7 +114,7 @@ def render_bar_of_constellation():
         if actress.constellation in constellation_stat:
             constellation_stat[actress.constellation] += 1
         else:
-            constellation_stat[actress.constellation]= 1
+            constellation_stat[actress.constellation] = 1
  
     for key in constellation_stat:
         cate.append(key)
