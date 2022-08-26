@@ -6,9 +6,6 @@ from server import get_router
 import uvicorn
 
 
-app = get_router()
-
-
 def main():
     usage = '''
     -d Deploy the server.
@@ -22,6 +19,7 @@ def main():
     parser.add_option("-c", "--crawl", help="Start all the tasks of spider.", action="store_true")
     
     (options, _) = parser.parse_args()
+    app = get_router()
     
     if options.deploy:
         uvicorn.run(app, host=default_host, port=default_port)

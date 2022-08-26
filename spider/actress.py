@@ -12,8 +12,13 @@ import re
 actress_list = []
 url_list = []
 cpu_num = cpu_count()
-to_english = {'中文名': 'name', '民族': 'nation',
-              '出生日期': 'birthday', '星座': 'constellation', '血型': 'blood_type', '身高': 'height', '体重': 'weight'}
+to_English = {"中文名": "name",
+              "民族": "nation",
+              "出生日期": "birthday",
+              "星座": "constellation",
+              "血型": "blood_type",
+              "身高": "height",
+              "体重": "weight"}
 
 
 def query_html(url):
@@ -137,11 +142,15 @@ def parse_actress_category_html(base_html):
 
 
 def check_str(str):
-    str_set = ('中文名', '民族', '出生日期',
-               '星座', '血型', '身高', '体重')
-    if str in str_set:
-        return True
-    return False
+    """ Check if the string in the set or not.
+    
+    Args:
+        str (string)
+    
+    Returns:
+        (boolean)
+    """
+    return str in to_English.keys()
 
 
 def parse_actress_html(base_html):
@@ -158,20 +167,18 @@ def parse_actress_html(base_html):
     soup = BeautifulSoup(base_html, "html.parser")
     left_element = soup.find("dl", class_="basicInfo-block basicInfo-left")
     right_element = soup.find("dl", class_="basicInfo-block basicInfo-right")
-    contents = list(
-        filter(('\n').__ne__, left_element.contents + right_element.contents))
+    contents = list(filter(("\n").__ne__, left_element.contents + right_element.contents))
 
-    values = {'name': '未知', 'nation': '未知', 'birthday': '未知',
-              'constellation': '未知', 'blood_type': '未知', 'height': '未知', 'weight': '未知'}
+    values = {"name": "未知", "nation": "未知", "birthday": "未知", "constellation": "未知", "blood_type": "未知", "height": "未知", "weight": "未知"}
     for index in range(0, len(contents), 2):
         tag = contents[index]
         tag_next = contents[index + 1]
         embedded_str = tag.string.replace(chr(160), "")
         if check_str(embedded_str):
             for string in tag_next.stripped_strings:
-                values[to_english[embedded_str]] = string
+                values[to_English[embedded_str]] = string
                 break
 
-    values['birthday'] = re.search('.*?日', values['birthday']).group()
+    values["birthday"] = re.search(".*?日", values["birthday"]).group()
     actress = Actress(**values)
     return actress
