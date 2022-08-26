@@ -180,5 +180,7 @@ def parse_actress_html(base_html):
                 break
 
     values["birthday"] = re.search(".*?日", values["birthday"]).group()
+    values["weight"] = re.sub(r'\skg', "", values["weight"])
+    values["height"] = re.sub(r'\scm', "", values["height"])
     actress = Actress(**values)
     return actress

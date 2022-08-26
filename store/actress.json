@@ -1,14 +1,5 @@
 [
     {
-        "name": "那英",
-        "nation": "满族",
-        "birthday": "1967年11月27日",
-        "constellation": "射手座",
-        "blood_type": "O型",
-        "height": "168",
-        "weight": "46"
-    },
-    {
         "name": "程莉莎",
         "nation": "汉族",
         "birthday": "1977年11月8日",
@@ -27,15 +18,6 @@
         "weight": "44"
     },
     {
-        "name": "金巧巧",
-        "nation": "朝鲜族",
-        "birthday": "1975年4月21日",
-        "constellation": "金牛座",
-        "blood_type": "O型",
-        "height": "167",
-        "weight": "48"
-    },
-    {
         "name": "左小青",
         "nation": "汉族",
         "birthday": "1977年6月25日",
@@ -43,15 +25,6 @@
         "blood_type": "AB型",
         "height": "167",
         "weight": "50"
-    },
-    {
-        "name": "董璇",
-        "nation": "汉族",
-        "birthday": "1979年11月5日",
-        "constellation": "天蝎座",
-        "blood_type": "A型",
-        "height": "168",
-        "weight": "52"
     },
     {
         "name": "胡静",
@@ -63,13 +36,22 @@
         "weight": "49"
     },
     {
-        "name": "张柏芝",
+        "name": "董璇",
         "nation": "汉族",
-        "birthday": "1980年5月24日",
-        "constellation": "双子座",
+        "birthday": "1979年11月5日",
+        "constellation": "天蝎座",
         "blood_type": "A型",
-        "height": "165",
-        "weight": "47"
+        "height": "168",
+        "weight": "52"
+    },
+    {
+        "name": "金巧巧",
+        "nation": "朝鲜族",
+        "birthday": "1975年4月21日",
+        "constellation": "金牛座",
+        "blood_type": "O型",
+        "height": "167",
+        "weight": "48"
     },
     {
         "name": "杨钰莹",
@@ -79,6 +61,15 @@
         "blood_type": "O型",
         "height": "158",
         "weight": "44"
+    },
+    {
+        "name": "那英",
+        "nation": "满族",
+        "birthday": "1967年11月27日",
+        "constellation": "射手座",
+        "blood_type": "O型",
+        "height": "168",
+        "weight": "46"
     },
     {
         "name": "安又琪",
@@ -97,6 +88,15 @@
         "blood_type": "O型",
         "height": "160",
         "weight": "40"
+    },
+    {
+        "name": "张柏芝",
+        "nation": "汉族",
+        "birthday": "1980年5月24日",
+        "constellation": "双子座",
+        "blood_type": "A型",
+        "height": "165",
+        "weight": "47"
     },
     {
         "name": "陈妍希",
@@ -135,15 +135,6 @@
         "weight": "45"
     },
     {
-        "name": "蒋璐霞",
-        "nation": "汉族",
-        "birthday": "1986年12月25日",
-        "constellation": "摩羯座",
-        "blood_type": "B型",
-        "height": "168",
-        "weight": "54"
-    },
-    {
         "name": "弦子",
         "nation": "壮族",
         "birthday": "1986年4月22日",
@@ -151,24 +142,6 @@
         "blood_type": "O型",
         "height": "169",
         "weight": "48"
-    },
-    {
-        "name": "贾青",
-        "nation": "汉族",
-        "birthday": "1986年11月2日",
-        "constellation": "天蝎座",
-        "blood_type": "A型",
-        "height": "170",
-        "weight": "46"
-    },
-    {
-        "name": "汤晶媚",
-        "nation": "汉族",
-        "birthday": "1987年5月24日",
-        "constellation": "双子座",
-        "blood_type": "O型",
-        "height": "168",
-        "weight": "45"
     },
     {
         "name": "张馨予",
@@ -180,13 +153,22 @@
         "weight": "51"
     },
     {
-        "name": "阿兰·达瓦卓玛",
-        "nation": "藏族",
-        "birthday": "1987年7月25日",
-        "constellation": "狮子座",
-        "blood_type": "O型",
-        "height": "162",
-        "weight": "未知"
+        "name": "蒋璐霞",
+        "nation": "汉族",
+        "birthday": "1986年12月25日",
+        "constellation": "摩羯座",
+        "blood_type": "B型",
+        "height": "168",
+        "weight": "54"
+    },
+    {
+        "name": "贾青",
+        "nation": "汉族",
+        "birthday": "1986年11月2日",
+        "constellation": "天蝎座",
+        "blood_type": "A型",
+        "height": "170",
+        "weight": "46"
     },
     {
         "name": "周笔畅",
@@ -195,6 +177,15 @@
         "constellation": "狮子座",
         "blood_type": "A型",
         "height": "165",
+        "weight": "未知"
+    },
+    {
+        "name": "阿兰·达瓦卓玛",
+        "nation": "藏族",
+        "birthday": "1987年7月25日",
+        "constellation": "狮子座",
+        "blood_type": "O型",
+        "height": "162",
         "weight": "未知"
     },
     {
@@ -207,13 +198,22 @@
         "weight": "48"
     },
     {
-        "name": "袁姗姗",
+        "name": "刘烨",
         "nation": "汉族",
-        "birthday": "1987年02月22日",
-        "constellation": "双鱼座",
-        "blood_type": "B型",
-        "height": "165",
-        "weight": "47"
+        "birthday": "1989年8月25日",
+        "constellation": "处女座",
+        "blood_type": "O型",
+        "height": "168",
+        "weight": "未知"
+    },
+    {
+        "name": "汤晶媚",
+        "nation": "汉族",
+        "birthday": "1987年5月24日",
+        "constellation": "双子座",
+        "blood_type": "O型",
+        "height": "168",
+        "weight": "45"
     },
     {
         "name": "江映蓉",
@@ -225,17 +225,8 @@
         "weight": "58"
     },
     {
-        "name": "刘烨",
-        "nation": "汉族",
-        "birthday": "1989年8月25日",
-        "constellation": "处女座",
-        "blood_type": "O型",
-        "height": "168",
-        "weight": "未知"
-    },
-    {
         "name": "陈小纭",
-        "nation": "未知",
+        "nation": "满族",
         "birthday": "1989年6月29日",
         "constellation": "巨蟹座",
         "blood_type": "未知",
@@ -243,11 +234,11 @@
         "weight": "48"
     },
     {
-        "name": "陈梓童",
+        "name": "袁姗姗",
         "nation": "汉族",
-        "birthday": "1989年10月30日",
-        "constellation": "天蝎座",
-        "blood_type": "未知",
+        "birthday": "1987年02月22日",
+        "constellation": "双鱼座",
+        "blood_type": "B型",
         "height": "165",
         "weight": "47"
     },
@@ -261,13 +252,13 @@
         "weight": "46"
     },
     {
-        "name": "杨丞琳",
+        "name": "陈梓童",
         "nation": "汉族",
-        "birthday": "1984年6月4日",
-        "constellation": "双子座",
-        "blood_type": "A型",
-        "height": "161",
-        "weight": "未知"
+        "birthday": "1989年10月30日",
+        "constellation": "天蝎座",
+        "blood_type": "未知",
+        "height": "165",
+        "weight": "47"
     },
     {
         "name": "苏运莹",
@@ -295,5 +286,14 @@
         "blood_type": "A型",
         "height": "170",
         "weight": "55"
+    },
+    {
+        "name": "杨丞琳",
+        "nation": "汉族",
+        "birthday": "1984年6月4日",
+        "constellation": "双子座",
+        "blood_type": "A型",
+        "height": "161",
+        "weight": "未知"
     }
 ]
