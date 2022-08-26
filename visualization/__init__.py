@@ -1,14 +1,13 @@
-height = "500px"
-width = "700px"
-pos_top = "80%"
+from .actress import render_all_about_actress
+from .television import render_all_about_television
+from .epidemic import render_all_about_epidemic
 
 
-class Router:
-    def __init__(self):
-        self.charts = []
-
-    def append_router(self, path):
-        self.charts.append(path)
-
-    def clear(self):
-        self.charts = []
+def render_all():
+    """ Render all the webview.
+    """
+    render_all_about_actress()
+    render_all_about_television()
+    render_all_about_epidemic()
+    
+    

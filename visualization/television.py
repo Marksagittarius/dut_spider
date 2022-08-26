@@ -2,7 +2,7 @@ from store import get_actor_stat, register_router, get_audience_form
 from pyecharts.charts import Pie, Bar, Line
 from pyecharts.globals import ThemeType
 from pyecharts import options as opts
-from . import Router, height, width, pos_top
+from .basic import Router, height, width, pos_top
 
 
 source_data = get_actor_stat()
