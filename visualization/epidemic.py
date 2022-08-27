@@ -5,7 +5,7 @@ from pyecharts import options as opts
 from pyecharts.charts import Map, Bar
 
 
-source_data = get_epidemic_data()
+source_data = [] 
 router_list = Router()
 
 
@@ -199,6 +199,9 @@ def render_all_about_epidemic():
 
     print("Render /epidemic")
     router_list.clear()
+    global source_data
+    if len(source_data) == 0:
+        source_data = get_epidemic_data()
     render_map_of_current_confirmed_num()
     render_map_of_total_local_confirmed_num()
     render_map_of_dead_num()
