@@ -5,7 +5,7 @@ from pyecharts import options as opts
 from .basic import Router, height, width, pos_top
 
 
-source_data = get_actor_stat()
+source_data = [] 
 audience_form = get_audience_form()
 
 router_list = Router()
@@ -190,6 +190,10 @@ def render_all_about_television():
     
     print("Render /television")
     router_list.clear()
+    global source_data
+    if len(source_data) == 0:
+        source_data = get_actor_stat()
+
     render_pie_of_height()
     render_pie_of_weight()
     render_pie_of_nation()
