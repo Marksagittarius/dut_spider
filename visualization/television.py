@@ -5,8 +5,8 @@ from pyecharts import options as opts
 from .basic import Router, height, width, pos_top
 
 
-source_data = [] 
-audience_form = get_audience_form()
+source_data = []
+audience_form = []
 
 router_list = Router()
 
@@ -97,7 +97,8 @@ def render_bar_of_blood_type():
     bar = Bar(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add_xaxis(cate).add_yaxis('', data, is_show_background=True).set_global_opts(
         title_opts=opts.TitleOpts(
             title="Blood Type", subtitle="演员血型分布 (人数)", pos_left="35%"),
-        toolbox_opts=opts.ToolboxOpts(is_show=True, orient="vertical", pos_left="1%"),
+        toolbox_opts=opts.ToolboxOpts(
+            is_show=True, orient="vertical", pos_left="1%"),
     ).set_series_opts(
         markline_opts=opts.MarkLineOpts(
             data=[
@@ -129,7 +130,8 @@ def render_bar_of_constellation():
     bar = Bar(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add_xaxis(cate).add_yaxis('', data, is_show_background=True, category_gap="10%").set_global_opts(
         title_opts=opts.TitleOpts(
             title="Constellation", subtitle="演员星座分布 (人数)", pos_left="35%"),
-        toolbox_opts=opts.ToolboxOpts(is_show=True, orient="vertical", pos_left="1%"),
+        toolbox_opts=opts.ToolboxOpts(
+            is_show=True, orient="vertical", pos_left="1%"),
         datazoom_opts=opts.DataZoomOpts()
     ).set_series_opts(
         markline_opts=opts.MarkLineOpts(
@@ -153,7 +155,7 @@ def render_line_of_audience_rate():
         dates.append(audience_form_unit.date)
         rate1.append(audience_form_unit.rate1)
         rate2.append(audience_form_unit.rate2)
-    
+
     line = Line(init_opts=opts.InitOpts(width=width, height=height, theme=ThemeType.LIGHT)).add_xaxis(dates).add_yaxis(series_name="东方卫视CSM59城收视", y_axis=rate1).set_global_opts(
         title_opts=opts.TitleOpts(
             title="Audience Rate", subtitle="两卫视收视率变化及对比 (%)", pos_left="35%", pos_top="7%"),
@@ -162,7 +164,7 @@ def render_line_of_audience_rate():
     ).add_yaxis(series_name="浙江卫视CSM59城收视", y_axis=rate2)
     line.render("static/charts/television/audience_rate_line.html")
     router_list.append_router("audience_rate_line")
-    
+
 
 def render_line_of_audience_share():
     dates = []
@@ -181,18 +183,18 @@ def render_line_of_audience_share():
     ).add_yaxis(series_name="浙江卫视CSM59城收视", y_axis=rate2)
     line.render("static/charts/television/audience_share_line.html")
     router_list.append_router("audience_share_line")
-    
-    
+
+
 def render_all_about_television():
     """ Rendering all the components of the router "/television".
 
     """
-    
+
     print("Render /television")
     router_list.clear()
     global source_data, audience_form
     source_data = get_actor_stat()
-    audience_form = get_audience_form() 
+    audience_form = get_audience_form()
 
     render_pie_of_height()
     render_pie_of_weight()
