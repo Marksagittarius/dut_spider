@@ -24,12 +24,14 @@ def main():
     (options, _) = parser.parse_args()
     app = get_router()
 
+    if options.crawl:
+        start_all_tasks()
+
+    if options.render:
+        render_all()
+
     if options.deploy:
         uvicorn.run(app, host=default_host, port=default_port)
-    elif options.crawl:
-        start_all_tasks()
-    elif options.render:
-        render_all()
 
 
 if __name__ == "__main__":

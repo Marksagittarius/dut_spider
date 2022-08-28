@@ -6,7 +6,7 @@ from .basic import Router, height, width, pos_top
 
 
 source_data = [] 
-audience_form = get_audience_form()
+audience_form = [] 
 
 router_list = Router()
 
@@ -190,9 +190,9 @@ def render_all_about_television():
     
     print("Render /television")
     router_list.clear()
-    global source_data
-    if len(source_data) == 0:
-        source_data = get_actor_stat()
+    global source_data, audience_form
+    source_data = get_actor_stat()
+    audience_form = get_audience_form() 
 
     render_pie_of_height()
     render_pie_of_weight()
