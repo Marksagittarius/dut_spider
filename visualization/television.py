@@ -5,7 +5,7 @@ from pyecharts import options as opts
 from .basic import Router, height, width, pos_top
 
 
-source_data = [] 
+source_data = []
 audience_form = get_audience_form()
 
 router_list = Router()

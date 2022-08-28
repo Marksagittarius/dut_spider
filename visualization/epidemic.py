@@ -5,7 +5,7 @@ from pyecharts import options as opts
 from pyecharts.charts import Map, Bar
 
 
-source_data = [] 
+source_data = []
 router_list = Router()
 
 
