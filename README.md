@@ -2,7 +2,7 @@
 
 # Dut Spider
 
-A simple project about Web Spider made by python. 
+A simple project about Web Spider made by python.
 
 ## Features
 
@@ -67,7 +67,7 @@ INFO:     Application startup complete.
 INFO:     Uvicorn running on http://localhost:8080 (Press CTRL+C to quit)
 ```
 
-if you visit the default site, you will noly get a null json, there are three different route, each of them are a solution of this Project
+If you visit the default site, you will noly get a null json because there are three different routes, which are the solutions of three different problems.
 
 - http://localhost:8080/actress
 - http://localhost:8080/television
