@@ -147,8 +147,7 @@ def render_all_about_actress():
     print("Render /actress")
     router_list.clear()
     global source_data
-    if len(source_data) == 0:
-        source_data = get_actress_stat()
+    source_data = get_actress_stat()
 
     render_pie_of_height()
     render_pie_of_weight()
