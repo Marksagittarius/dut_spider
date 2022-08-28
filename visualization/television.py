@@ -6,7 +6,7 @@ from .basic import Router, height, width, pos_top
 
 
 source_data = [] 
-audience_form = [] 
+audience_form = get_audience_form()
 
 router_list = Router()
 
